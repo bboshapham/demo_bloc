@@ -7,5 +7,9 @@ class CounterObserver extends BlocObserver {
   //override ham onchange để theo dõi thay đổi trạng thái
   void onChange(BlocBase<dynamic> bloc, Change<dynamic> change) {
     super.onChange(bloc, change);
+
+//dùng để ghi log lại các thay đổi của biến thái
+    // ignore: avoid_print
+    print('Ghi log: ${bloc.runtimeType} $change');
   }
 }
